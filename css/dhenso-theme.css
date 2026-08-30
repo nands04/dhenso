@@ -450,3 +450,69 @@ html, body {
 .w-nav-menu {
   background-color: var(--dh-bg) !important;
 }
+
+/* ---------- CORREÇÕES MOBILE (MAX-WIDTH: 767px) ---------- */
+@media screen and (max-width: 767px) {
+  /* Header Banner */
+  .dh-hero-badge {
+    white-space: normal !important;
+    font-size: 0.7rem !important;
+    padding: 0.4rem 0.6rem !important;
+    text-align: center;
+    height: auto;
+  }
+
+  /* Remove blank spaces */
+  .u-section-spacer.w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490 {
+    height: 3rem !important;
+  }
+
+  /* Big Headings - "Conforto garantido", "Climatização profissional" */
+  .display-heading_wrap {
+    font-size: 2.2rem !important;
+    line-height: 1.1 !important;
+    white-space: normal !important;
+  }
+  .how-works_contain h3 {
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* SVG Wavy Line in How It Works */
+  .how-works_mobile-svg,
+  .how-works_desktop-svg,
+  .how-works_mobile-small,
+  .how-works_phone {
+    display: none !important;
+  }
+
+  /* Localização & Contato / Features / Footer Layout */
+  .contact-map,
+  .footer_layout .u-grid,
+  .features_contain .u-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Footer text wrap prevent */
+  .footer_link_text {
+    white-space: normal !important;
+  }
+  .footer_social_wrap {
+    text-align: center !important;
+  }
+
+  /* CTA Wrap Título "Garanta Ar Limpo" */
+  .cta_wrap h2,
+  .cta_layout h2 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* FAQs - "Perguntas Frequentes" */
+  .faqs_content h2 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+}
