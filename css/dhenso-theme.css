@@ -36,18 +36,38 @@ html {
 /* ---------- NAVEGAÇÃO (HEADER) ---------- */
 .nav_desktop_wrap,
 .nav_mobile_contain {
-  background-color: var(--dh-bg) !important;
-  border-bottom: 1px solid rgba(10, 77, 140, 0.12);
+  background-color: transparent !important;
+  border-bottom: none !important;
 }
+
+/* Header Pill (Desktop e Mobile) */
+.nav_desktop_layout,
+.nav_mobile_layout {
+  background-color: var(--dh-primary) !important;
+  border-radius: 4rem !important;
+  padding: 0.5rem 1.5rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  box-shadow: 0 4px 12px rgba(10, 77, 140, 0.2);
+}
+
 .nav_links_text {
-  color: var(--dh-text) !important;
-}
-.nav_mobile_menu_wrap .nav_links_text,
-.w-nav-menu .nav_links_text {
   color: #ffffff !important;
 }
 .nav_links_link:hover .nav_links_text {
   color: var(--dh-accent) !important;
+}
+
+/* Botão dentro do Header Pill */
+.nav_desktop_layout .button_main_element,
+.nav_desktop_layout .button_hover_element,
+.nav_mobile_layout .button_main_element,
+.nav_mobile_layout .button_hover_element {
+  background-color: #ffffff !important;
+}
+.nav_desktop_layout .button_main_text,
+.nav_mobile_layout .button_main_text {
+  color: var(--dh-primary) !important;
 }
 
 /* ---------- LOGO DHENSO (no nav) ---------- */
@@ -335,7 +355,7 @@ section:has(.integrations_cms_wrap) {
 
 /* ---------- MOBILE NAV (hamburger) ---------- */
 .nav_button_line {
-  background-color: var(--dh-primary) !important;
+  background-color: #ffffff !important;
 }
 .nav_mobile_menu_wrap {
   background-color: var(--dh-primary) !important;
