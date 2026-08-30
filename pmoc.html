@@ -1,0 +1,343 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Dhenso | PMOC — Plano de Manutenção, Operação e Controle</title><meta content="A Dhenso elabora programas PMOC totalmente digitalizados e em conformidade com a ANVISA e o Ministério da Saúde. Proteja sua empresa e garanta a qualidade do ar." name="description"><meta content="Dhenso | PMOC" property="og:title"><meta property="og:type" content="website"><meta content="width=device-width, initial-scale=1" name="viewport">
+<link rel="stylesheet" href="css/dhenso-theme.css">
+<link href="../_external/cdn.prod.website-files.com/697b66b471bb96c6995594ab/css/quoti---test.webflow.shared.e541e2b41.min.css" rel="stylesheet" type="text/css">
+<link href="../_external/cdn.prod.website-files.com/697b66b471bb96c6995594ab/css/quoti---test.webflow.697b66b471bb96c699559495.8e782ae3c.opt.min.css" rel="stylesheet" type="text/css">
+<script>!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+<link href="images/favicon.png" rel="shortcut icon" type="image/png">
+<style>
+  .pmoc-hero{background:linear-gradient(135deg,#0A4D8C 0%,#06325a 60%,#041e38 100%);padding:8rem 0 5rem;text-align:center;color:#fff}
+  .pmoc-hero h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:800;line-height:1.1;margin-bottom:1.2rem;color:#fff}
+  .pmoc-hero p{font-size:1.05rem;max-width:720px;margin:0 auto 2rem;color:rgba(255,255,255,.8);line-height:1.75}
+  .pmoc-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(0,163,224,.18);border:1px solid rgba(0,163,224,.4);color:#00A3E0;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.35rem .9rem;border-radius:2rem;margin-bottom:1.4rem}
+
+  .pmoc-container{max-width:1100px;margin:0 auto;padding:0 2rem}
+
+  /* Seções */
+  .pmoc-sec{padding:5rem 0}
+  .pmoc-sec.light{background:#F4F8FA}
+  .pmoc-sec.dark{background:#0B192C}
+  .pmoc-sec.white{background:#fff}
+  .pmoc-h2{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:800;color:#0A4D8C;margin-bottom:.6rem}
+  .pmoc-sec.dark .pmoc-h2{color:#00A3E0}
+  .pmoc-lead{color:#334155;font-size:1rem;line-height:1.75;max-width:780px;margin-bottom:2.5rem}
+  .pmoc-sec.dark .pmoc-lead{color:rgba(255,255,255,.7)}
+
+  /* Cards info */
+  .pmoc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem}
+  .pmoc-card{background:#fff;border:1px solid rgba(10,77,140,.12);border-radius:1.25rem;padding:1.8rem 1.6rem;transition:box-shadow .25s,transform .25s}
+  .pmoc-card:hover{box-shadow:0 8px 32px rgba(10,77,140,.13);transform:translateY(-4px)}
+  .pmoc-sec.dark .pmoc-card{background:rgba(0,163,224,.07);border-color:rgba(0,163,224,.22)}
+  .pmoc-card-icon{width:46px;height:46px;background:linear-gradient(135deg,#0A4D8C,#00A3E0);border-radius:.85rem;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
+  .pmoc-card-icon svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .pmoc-card h3{font-size:1.05rem;font-weight:700;color:#0A4D8C;margin-bottom:.5rem}
+  .pmoc-sec.dark .pmoc-card h3{color:#00A3E0}
+  .pmoc-card p{font-size:.9rem;color:#334155;line-height:1.65}
+  .pmoc-sec.dark .pmoc-card p{color:rgba(255,255,255,.7)}
+
+  /* Periodicidade */
+  .pmoc-period{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem}
+  .pmoc-period-item{text-align:center;padding:2rem 1.4rem;background:#fff;border-radius:1rem;border:2px solid rgba(10,77,140,.1);transition:border-color .2s}
+  .pmoc-period-item:hover{border-color:#00A3E0}
+  .pmoc-period-num{font-size:2.8rem;font-weight:900;color:#0A4D8C;line-height:1}
+  .pmoc-period-label{font-size:.8rem;font-weight:700;color:#00A3E0;text-transform:uppercase;letter-spacing:.1em;margin:.3rem 0 .8rem}
+  .pmoc-period-desc{font-size:.88rem;color:#334155;line-height:1.6}
+
+  /* Legislação */
+  .pmoc-law-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem}
+  .pmoc-law-list li{display:flex;align-items:flex-start;gap:.9rem;background:rgba(0,163,224,.07);border:1px solid rgba(0,163,224,.2);border-radius:.8rem;padding:1rem 1.2rem;font-size:.93rem;color:rgba(255,255,255,.8);line-height:1.6}
+  .pmoc-law-list li::before{content:"§";font-size:1.1rem;font-weight:900;color:#00A3E0;flex-shrink:0;margin-top:.05rem}
+
+  /* Alerta saúde */
+  .pmoc-alert{background:rgba(220,38,38,.08);border:1px solid rgba(220,38,38,.25);border-radius:1rem;padding:1.8rem 1.6rem;margin-bottom:2rem}
+  .pmoc-alert h4{color:#ef4444;font-weight:700;font-size:1rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
+  .pmoc-alert p{color:rgba(255,255,255,.75);font-size:.9rem;line-height:1.7}
+
+  /* CTA */
+  .pmoc-cta{background:linear-gradient(120deg,#021a30,#04395e,#0ea5e9,#021a30);background-size:200% 200%;animation:windEffect 8s ease-in-out infinite;padding:5rem 2rem;text-align:center}
+  .pmoc-cta h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;color:#f0f9ff;margin-bottom:1rem}
+  .pmoc-cta p{color:rgba(255,255,255,.8);font-size:1.05rem;margin-bottom:2rem}
+  .pmoc-cta-btn{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(90deg,#0A4D8C,#00A3E0);color:#fff;font-weight:700;font-size:1rem;padding:.9rem 2.2rem;border-radius:2rem;text-decoration:none;transition:opacity .2s,transform .2s}
+  .pmoc-cta-btn:hover{opacity:.9;transform:scale(1.03)}
+  @keyframes windEffect{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+  hr.pmoc-div{border:none;border-top:1px solid rgba(10,77,140,.1);margin:0}
+</style>
+
+<style>
+  /* ---- Botão Flutuante Voltar ---- */
+  .floating-back-btn {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    background: #0A4D8C;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .floating-back-btn:hover {
+    transform: translateY(-3px);
+    background: #00A3E0;
+    color: #fff;
+  }
+  .floating-back-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* ---- Responsividade Mobile (Páginas Internas) ---- */
+  @media (max-width: 768px) {
+    .floating-back-btn {
+      bottom: 1rem;
+      left: 1rem;
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+    .nav_desktop_layout {
+      flex-direction: column !important;
+      padding: 1rem 0 !important;
+      gap: 1rem !important;
+    }
+    .nav_links_wrap {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 0.8rem !important;
+    }
+    .nav_links_item {
+      margin: 0 !important;
+    }
+    .nav_actions_wrap {
+      width: 100% !important;
+      justify-content: center !important;
+      margin-top: 0.5rem !important;
+    }
+    .srv-hero, .pmoc-hero {
+      padding: 4rem 1rem 3rem !important;
+    }
+    .srv-section, .pmoc-sec {
+      padding: 3rem 0 !important;
+    }
+    .srv-grid, .pmoc-grid, .srv-tech-grid, .pmoc-period {
+      grid-template-columns: 1fr !important;
+    }
+    .srv-cta-btn, .pmoc-cta-btn {
+      width: 100% !important;
+      justify-content: center !important;
+      box-sizing: border-box !important;
+    }
+    .footer_wrap > div {
+      flex-direction: column !important;
+      text-align: center !important;
+      gap: 1.5rem !important;
+    }
+    .footer_wrap > div > div:first-child {
+      justify-content: center !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav_desktop_wrap">
+  <div class="nav_desktop_contain">
+    <div class="nav_desktop_layout">
+      <a href="index.html" class="nav_desktop_logo w-inline-block" style="display:flex;align-items:center;">
+        <div style="display:flex;align-items:center;"><img src="images/logo-dhenso.jpg" alt="DHENSO Ar Condicionado" style="height:38px;width:auto;object-fit:contain;display:block;"></div>
+      </a>
+      <nav class="nav_links_component">
+        <ul class="nav_links_wrap w-list-unstyled" role="list">
+          <li class="nav_links_item"><a href="index.html" class="nav_links_link w-inline-block"><div class="nav_links_text">Início</div></a></li>
+          <li class="nav_links_item"><a href="servicos.html" class="nav_links_link w-inline-block"><div class="nav_links_text">Serviços</div></a></li>
+          <li class="nav_links_item"><a href="pmoc.html" class="nav_links_link w-inline-block w--current"><div class="nav_links_text">PMOC</div></a></li>
+          <li class="nav_links_item"><a href="index.html#faqs" class="nav_links_link w-inline-block"><div class="nav_links_text">FAQ</div></a></li>
+        </ul>
+        <ul class="nav_actions_wrap w-list-unstyled" role="list">
+          <li class="nav_buttons_item">
+            <div data-wf--button-main--variant="primary" class="button_main_wrap">
+              <div class="clickable_wrap u-cover-absolute">
+                <a target="_blank" href="https://wa.me/5582988754135?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20PMOC%20da%20Dhenso" class="clickable_link w-inline-block"></a>
+              </div>
+              <div class="button_main_element"><div class="button_main_text u-text-style-h6">Solicitar PMOC</div><div class="button_main_line"></div></div>
+              <div class="button_hover_element"><div class="button_main_text u-text-style-h6">Solicitar PMOC</div><div class="button_main_line"></div></div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="pmoc-hero">
+    <div class="pmoc-container">
+      <div class="pmoc-badge">✦ Conformidade ANVISA &amp; Ministério da Saúde</div>
+      <h1>PMOC — Plano de Manutenção,<br>Operação e Controle</h1>
+      <p>A Dhenso elabora programas PMOC totalmente digitalizados e em total conformidade com as normas regulamentares exigidas pelo Ministério da Saúde e pela ANVISA. Proteja sua empresa, seus colaboradores e seu investimento.</p>
+      <a href="https://wa.me/5582988754135?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20PMOC%20da%20Dhenso" target="_blank" class="pmoc-cta-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.523 5.847L0 24l6.335-1.502A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.007-1.377l-.36-.214-3.727.883.936-3.619-.235-.372A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+        Solicitar PMOC Sem Compromisso
+      </a>
+    </div>
+  </section>
+
+  <!-- O QUE É PMOC -->
+  <section class="pmoc-sec light">
+    <div class="pmoc-container">
+      <h2 class="pmoc-h2">O que é o PMOC?</h2>
+      <p class="pmoc-lead">O PMOC é um trabalho de rotina onde são realizadas higienizações e verificações de funcionamento em ciclos mensais, trimestrais e semestrais, garantindo boa qualidade do ar e bom funcionamento dos aparelhos. Com um contrato de manutenção preventiva, o equipamento recebe inspeções periódicas e calibração apropriada para aperfeiçoar seu desempenho e vida útil.</p>
+
+      <div class="pmoc-grid">
+        <div class="pmoc-card">
+          <div class="pmoc-card-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+          <h3>Totalmente Digitalizado</h3>
+          <p>Relatórios e laudos emitidos digitalmente, com histórico completo de cada equipamento acessível a qualquer momento para auditorias e fiscalizações.</p>
+        </div>
+        <div class="pmoc-card">
+          <div class="pmoc-card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Conformidade Legal</h3>
+          <p>Aderente às normas regulamentares do Ministério da Saúde e da ANVISA, protegendo sua empresa de autuações e interdições sanitárias.</p>
+        </div>
+        <div class="pmoc-card">
+          <div class="pmoc-card-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <h3>Contrato de Longo Prazo</h3>
+          <p>Segurança e previsibilidade para o cliente, com atendimento periódico garantido, preservação do investimento e conformidade contínua com as exigências legais.</p>
+        </div>
+        <div class="pmoc-card">
+          <div class="pmoc-card-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <h3>Profissionais Credenciados</h3>
+          <p>Equipe capacitada e credenciada nos órgãos competentes de engenharia, garantindo a qualidade técnica de cada procedimento realizado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pmoc-div">
+
+  <!-- PERIODICIDADE -->
+  <section class="pmoc-sec white">
+    <div class="pmoc-container">
+      <h2 class="pmoc-h2">Ciclos de Manutenção</h2>
+      <p class="pmoc-lead">Os procedimentos são organizados em grupos de frequência para garantir o máximo desempenho e conformidade legal do sistema.</p>
+      <div class="pmoc-period">
+        <div class="pmoc-period-item">
+          <div class="pmoc-period-num">Mensal</div>
+          <div class="pmoc-period-label">Visita obrigatória</div>
+          <div class="pmoc-period-desc">Limpeza de filtros, verificação de funcionamento geral, emissão de relatório digitalizado e registro fotográfico.</div>
+        </div>
+        <div class="pmoc-period-item">
+          <div class="pmoc-period-num">Trimestral</div>
+          <div class="pmoc-period-label">Inspeção ampliada</div>
+          <div class="pmoc-period-desc">Higienização do evaporador e condensador, lubrificação de mancais, verificação elétrica e reaperto de bornes.</div>
+        </div>
+        <div class="pmoc-period-item">
+          <div class="pmoc-period-num">Semestral</div>
+          <div class="pmoc-period-label">Revisão completa</div>
+          <div class="pmoc-period-desc">Análise completa do sistema, calibração, testes de pressão, verificação de gás refrigerante e laudo técnico detalhado.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="pmoc-div">
+
+  <!-- POR QUE FAZER PMOC -->
+  <section class="pmoc-sec dark">
+    <div class="pmoc-container">
+      <h2 class="pmoc-h2">Por que realizar o PMOC?</h2>
+      <p class="pmoc-lead">A falta de manutenção nos sistemas de ar condicionado representa riscos sérios à saúde dos ocupantes. Conheça os perigos e as obrigações legais.</p>
+
+      <div class="pmoc-alert">
+        <h4>⚠️ Legionelose — Um Risco Real</h4>
+        <p>A Legionelose é causada pela bactéria <em>Legionella Pneumophila</em>, identificada em 1976 nos EUA durante uma convenção onde 221 pessoas contraíram a doença e 34 morreram. A bactéria estava nos reservatórios de ar condicionado sem manutenção. Infectologistas atestam que no Brasil a Legionella é mais disseminada do que se supunha, principalmente nos grandes centros urbanos.</p>
+      </div>
+
+      <div class="pmoc-grid">
+        <div class="pmoc-card">
+          <div class="pmoc-card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Saúde dos Ocupantes</h3>
+          <p>Fungos, bactérias e partículas acumuladas nos equipamentos sem manutenção são liberados no ar respirado diariamente, causando alergias e infecções respiratórias.</p>
+        </div>
+        <div class="pmoc-card">
+          <div class="pmoc-card-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h3>Eficiência Energética</h3>
+          <p>Equipamentos sujos consomem até 30% mais energia. A manutenção regular reduz custos operacionais e mantém o sistema funcionando com máxima eficiência.</p>
+        </div>
+        <div class="pmoc-card">
+          <div class="pmoc-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>Vida Útil do Equipamento</h3>
+          <p>A manutenção preventiva regular aumenta significativamente a vida útil dos equipamentos, protegendo o investimento realizado e evitando substituições prematuras.</p>
+        </div>
+        <div class="pmoc-card">
+          <div class="pmoc-card-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <h3>Obrigação Legal</h3>
+          <p>Por portaria do Ministério da Saúde, aparelhos de ar condicionado em ambientes comerciais devem ser submetidos a rigorosa fiscalização para serem considerados aptos a funcionar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGISLAÇÃO -->
+  <section class="pmoc-sec dark" style="padding-top:0">
+    <div class="pmoc-container">
+      <h2 class="pmoc-h2">Base Legal — Normas Vigentes</h2>
+      <p class="pmoc-lead">Além da ANVISA, diversas leis e resoluções exigem a manutenção adequada dos sistemas de ar condicionado:</p>
+      <ul class="pmoc-law-list">
+        <li><strong>Portaria GM/MS nº 3.523/98</strong> — Determina que os ambientes climatizados sejam submetidos a programa de manutenção preventiva com emissão de PMOC.</li>
+        <li><strong>Resolução RE nº 9 de 16/01/2003</strong> — Estabelece padrões referenciais de qualidade do ar interior em ambientes climatizados artificialmente de uso público e coletivo.</li>
+        <li><strong>Resolução RE nº 176 de 24/10/2000</strong> — Define os procedimentos e responsabilidades relativos ao controle e vigilância da qualidade do ar de interiores.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="pmoc-cta">
+    <div class="pmoc-container">
+      <h2>Garanta a Conformidade da<br>Sua Empresa Hoje</h2>
+      <p>A higienização periódica com produtos registrados no Ministério da Saúde, acompanhada de vistorias e laudos, é obrigação legal. Entre em contato e faça um orçamento sem compromisso.</p>
+      <a href="https://wa.me/5582988754135?text=Olá,%20gostaria%20de%20solicitar%20um%20PMOC%20para%20minha%20empresa" target="_blank" class="pmoc-cta-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.523 5.847L0 24l6.335-1.502A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.007-1.377l-.36-.214-3.727.883.936-3.619-.235-.372A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <div style="margin-top:1.5rem;color:rgba(255,255,255,.6);font-size:.9rem">
+        📞 (82) 3023-4135 &nbsp;|&nbsp; (82) 98875-4135 &nbsp;|&nbsp; 📍 R. Gonçalves Dias, nº85 - Farol, Maceió - AL
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer_wrap" style="background:#0B192C;padding:2.5rem 2rem;text-align:center;border-top:2px solid #0A4D8C">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem">
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+      <a href="index.html" class="footer_link_text" style="text-decoration:none">Início</a>
+      <a href="servicos.html" class="footer_link_text" style="text-decoration:none">Serviços</a>
+      <a href="pmoc.html" class="footer_link_text" style="text-decoration:none">PMOC</a>
+      <a href="terms.html" class="footer_link_text" style="text-decoration:none">Termos</a>
+      <a href="privacy.html" class="footer_link_text" style="text-decoration:none">Privacidade</a>
+    </div>
+    <div class="footer_bottom_text u-text-style-h6">
+      © DHENSO AR CONDICIONADO <span id="ano"></span> — Todos os Direitos Reservados.
+    </div>
+  </div>
+</footer>
+<script>document.getElementById("ano").textContent=new Date().getFullYear();</script>
+
+<a href="index.html" class="floating-back-btn">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+  <span>Início</span>
+</a>
+</body></html>

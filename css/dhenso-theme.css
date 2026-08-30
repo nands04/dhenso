@@ -1,0 +1,428 @@
+/* ============================================
+   DHENSO AR CONDICIONADO — TEMA VISUAL
+   Sobrescreve a paleta do Quoti sem quebrar
+   nenhuma animação, script ou estrutura DOM.
+   ============================================ */
+
+/* ---------- VARIÁVEIS DE COR ---------- */
+:root {
+  --dh-primary:   #0A4D8C;   /* Azul Royal Corporativo */
+  --dh-accent:    #00A3E0;   /* Ciano / Ar / Fluxo */
+  --dh-text:      #0B192C;   /* Tipografia principal */
+  --dh-text-soft: #334155;   /* Tipografia secundária */
+  --dh-bg:        #FFFFFF;   /* Fundo limpo */
+  --dh-surface:   #F4F8FA;   /* Surface / Ice */
+  --dh-whatsapp:  #25D366;   /* CTA WhatsApp */
+  --dh-dark:      #0B192C;   /* Fundo escuro (dark sections) */
+}
+
+/* ---------- GOOGLE FONT ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body, .nav_links_text, .u-text, h1, h2, h3, h4, h5, h6, p,
+.button_main_text, .tab-description, .footer_link_text {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* ---------- BACKGROUNDS GERAIS ---------- */
+html {
+  background-color: var(--dh-bg) !important;
+}
+.page_wrap,
+.page_main {
+  background-color: var(--dh-bg);
+}
+
+/* ---------- NAVEGAÇÃO (HEADER) ---------- */
+.nav_desktop_wrap,
+.nav_mobile_contain {
+  background-color: var(--dh-bg) !important;
+  border-bottom: 1px solid rgba(10, 77, 140, 0.12);
+}
+.nav_links_text {
+  color: var(--dh-text) !important;
+}
+.nav_links_link:hover .nav_links_text {
+  color: var(--dh-accent) !important;
+}
+
+/* ---------- LOGO DHENSO (no nav) ---------- */
+/* Imagem PNG da logo — remove texto via ::after e oculta SVG antigo */
+.nav_desktop_logo svg,
+.nav_mobile_logo svg {
+  display: none !important;
+}
+.nav_desktop_logo::after,
+.nav_desktop_logo:hover::after,
+.nav_mobile_logo::after {
+  content: none !important;
+  display: none !important;
+}
+.nav_desktop_logo img,
+.nav_mobile_logo img {
+  display: block !important;
+  height: 38px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* ---------- BOTÃO PRIMÁRIO (Solicitar / CTA principal) ---------- */
+.button_main_wrap[data-wf--button-main--variant="primary"] .button_main_element,
+.button_main_wrap[data-wf--button-main--variant="primary"] .button_hover_element {
+  background: linear-gradient(90deg, var(--dh-primary) 0%, var(--dh-accent) 100%) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+.button_main_wrap[data-wf--button-main--variant="primary"] .button_main_text,
+.button_main_wrap[data-wf--button-main--variant="primary"] .button_main_icon {
+  color: #fff !important;
+}
+
+/* ---------- BOTÃO SECUNDÁRIO (Conhecer Planos / ghost) ---------- */
+.button_main_wrap[data-wf--button-main--variant="secondary"] .button_main_element,
+.button_main_wrap[data-wf--button-main--variant="secondary"] .button_hover_element {
+  background: transparent !important;
+  border: 2px solid var(--dh-primary) !important;
+  color: var(--dh-primary) !important;
+}
+.button_main_wrap[data-wf--button-main--variant="secondary"] .button_main_text {
+  color: var(--dh-primary) !important;
+}
+.button_main_wrap[data-wf--button-main--variant="secondary"]:hover .button_main_element {
+  background: var(--dh-primary) !important;
+  color: #fff !important;
+}
+
+/* ---------- BOTÃO DARK / BLACK (login) ---------- */
+.button_main_wrap[data-wf--button-main--variant="black"] .button_main_element,
+.button_main_wrap[data-wf--button-main--variant="black"] .button_hover_element {
+  background: var(--dh-primary) !important;
+  border-color: var(--dh-primary) !important;
+}
+
+/* ---------- BOTÃO WHATSAPP (CTA final) ---------- */
+.dh-btn-whatsapp .button_main_element,
+.dh-btn-whatsapp .button_hover_element {
+  background: var(--dh-whatsapp) !important;
+  border-color: var(--dh-whatsapp) !important;
+  color: #fff !important;
+}
+.dh-btn-whatsapp .button_main_text {
+  color: #fff !important;
+}
+
+/* ---------- HERO SECTION ---------- */
+.home-hero_wrap {
+  background: linear-gradient(135deg, var(--dh-primary) 0%, #06325a 60%, #041e38 100%) !important;
+}
+.home-hero_main h1,
+.home-hero_main h2,
+.home-hero_main h3,
+.home-hero_main p,
+.home-hero_benefits_item {
+  color: #ffffff !important;
+}
+.home-hero_trust_text {
+  color: rgba(255,255,255,0.75) !important;
+}
+/* Badge / tagline dentro do hero */
+.dh-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(0, 163, 224, 0.18);
+  border: 1px solid rgba(0, 163, 224, 0.4);
+  color: #00A3E0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 2rem;
+  margin-bottom: 1.2rem;
+}
+/* Prova social rápida */
+.dh-hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.8rem;
+  margin-top: 1.2rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.02em;
+}
+.dh-hero-proof span::before {
+  content: "✓ ";
+  color: var(--dh-accent);
+}
+
+/* ---------- PAIN POINTS (cards rotativos) ---------- */
+.pain-point_wrap {
+  background-color: var(--dh-dark) !important;
+}
+.pain-point_card {
+  background: rgba(0, 163, 224, 0.06) !important;
+  border: 1px solid rgba(0, 163, 224, 0.2) !important;
+}
+.pain-point_wrap h2,
+.pain-point_card h2 {
+  color: #fff !important;
+}
+.pain-point_wrap p,
+.u-color-faded {
+  color: rgba(255,255,255,0.65) !important;
+}
+
+/* ---------- BIG HEADING DISPLAY ---------- */
+.big-head_wrap {
+  background-color: var(--dh-surface) !important;
+}
+.big-head_wrap .u-text-style-display,
+.display-heading_wrap {
+  color: var(--dh-primary) !important;
+}
+
+/* ---------- SERVIÇOS (cards interativos) ---------- */
+.services_wrap {
+  background-color: var(--dh-bg) !important;
+}
+.services_card_content {
+  background: var(--dh-surface) !important;
+  border: 1px solid rgba(10, 77, 140, 0.1) !important;
+}
+.services_card_title .u-text-style-h4 {
+  color: var(--dh-primary) !important;
+}
+
+/* ---------- REVIEWS / DEPOIMENTOS ---------- */
+.reviews_wrap {
+  background-color: var(--dh-bg) !important;
+}
+.reviews_card {
+  background: var(--dh-surface) !important;
+  border: 1px solid rgba(10, 77, 140, 0.1) !important;
+}
+.reviews_card p {
+  color: var(--dh-text) !important;
+}
+.reviews_name {
+  color: var(--dh-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- HOW IT WORKS (etapas com SVG path) ---------- */
+.how-works_wrap {
+  background: linear-gradient(180deg, var(--dh-primary) 0%, #041e38 100%) !important;
+}
+.how-works_card {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(0,163,224,0.25) !important;
+}
+.how-works_card h2,
+.how-works_card p,
+.how-works_contain h2,
+.how-works_contain h3 {
+  color: #fff !important;
+}
+.how-works_desktop-svg path,
+.how-works_mobile-svg path {
+  stroke: var(--dh-accent) !important;
+}
+
+/* ---------- FEATURES (tabs interativas) ---------- */
+.features_wrap {
+  background-color: var(--dh-bg) !important;
+}
+.tab-heading {
+  color: var(--dh-accent) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.82rem !important;
+}
+.content-item__heading {
+  color: var(--dh-text) !important;
+}
+.tab-description {
+  color: var(--dh-text-soft) !important;
+}
+.tab-content__item.active .content-item__heading {
+  color: var(--dh-primary) !important;
+}
+.tab-progress {
+  background: linear-gradient(90deg, var(--dh-primary), var(--dh-accent)) !important;
+}
+
+/* ---------- INTEGRATIONS ---------- */
+.big-head_wrap.u-section:has(.integrations_cms_wrap),
+section:has(.integrations_cms_wrap) {
+  background-color: var(--dh-surface) !important;
+}
+
+/* ---------- CTA BANNER ---------- */
+.cta_wrap {
+  background: linear-gradient(135deg, var(--dh-primary) 0%, #06325a 100%) !important;
+}
+.cta_wrap h2,
+.cta_wrap p {
+  color: #fff !important;
+}
+
+/* ---------- FAQs ---------- */
+.faqs_wrap {
+  background-color: var(--dh-dark) !important;
+}
+.faqs_wrap h2 {
+  color: #fff !important;
+}
+.faq_dd_text {
+  color: #fff !important;
+}
+.faq_dd {
+  border-bottom: 1px solid rgba(0,163,224,0.2) !important;
+}
+.faq_dd_nav p {
+  color: rgba(255,255,255,0.7) !important;
+}
+.faq_dd_icon path {
+  fill: var(--dh-accent) !important;
+}
+
+/* ---------- FOOTER ---------- */
+.footer_wrap {
+  background-color: var(--dh-dark) !important;
+  border-top: 2px solid var(--dh-primary);
+}
+.footer_link_text,
+.footer_link_wrap {
+  color: rgba(255,255,255,0.7) !important;
+}
+.footer_link_wrap:hover .footer_link_text {
+  color: var(--dh-accent) !important;
+}
+.footer_bottom_text,
+.footer_social_title {
+  color: rgba(255,255,255,0.5) !important;
+}
+/* Logo DHENSO grande no rodapé */
+.footer_logo_svg {
+  opacity: 0.08 !important;
+}
+/* Remover ícones de app store (não aplicável) */
+.footer_stores {
+  display: none !important;
+}
+
+/* ---------- SELEÇÃO DE TEXTO ---------- */
+::selection {
+  background-color: var(--dh-accent) !important;
+  color: #fff !important;
+}
+
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dh-surface); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--dh-primary), var(--dh-accent));
+  border-radius: 3px;
+}
+
+/* ---------- MOBILE NAV (hamburger) ---------- */
+.nav_button_line {
+  background-color: var(--dh-primary) !important;
+}
+.nav_mobile_menu_wrap {
+  background-color: var(--dh-bg) !important;
+}
+.nav_menu_backdrop,
+.nav_dropdown_backdrop {
+  background-color: rgba(10, 77, 140, 0.6) !important;
+}
+
+/* ---------- MICRO ANIMAÇÃO — COR DE FOCO ---------- */
+a:focus-visible,
+button:focus-visible {
+  outline-color: var(--dh-accent) !important;
+}
+
+/* ---------- CORREÇÃO TEXTO HERO (CLIMATIZAÇÃO) ---------- */
+/* Garante que os h1 da hero nunca cortem */
+.home-hero_main .u-text h1,
+.home-hero_main h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem) !important;
+  line-height: 1.1 !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 991px) {
+  .home-hero_main h1 {
+    font-size: 3.5rem !important;
+    line-height: 1.1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-hero_main h1 {
+    font-size: 2.8rem !important;
+    line-height: 1.1;
+  }
+}
+@media screen and (max-width: 580px) {
+  .home-hero_main h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.15;
+  }
+}
+@media screen and (max-width: 479px) {
+  .home-hero_main h1 {
+    font-size: 1.9rem !important;
+    line-height: 1.2;
+  }
+}
+@media screen and (max-width: 380px) {
+  .home-hero_main h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.2;
+  }
+}
+
+/* ---------- EFEITO VENTO FRIO / CLIMATIZAÇÃO NA CTA ---------- */
+.cta_layout {
+  background: linear-gradient(120deg, #021a30, #04395e, #0ea5e9, #021a30) !important;
+  background-size: 200% 200% !important;
+  animation: windEffect 8s ease-in-out infinite !important;
+  border-radius: 2rem !important;
+  overflow: hidden !important;
+  box-shadow: inset 0 0 50px rgba(125, 211, 252, 0.3) !important;
+}
+
+.cta_wrap {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Remover celular antigo do webflow */
+.cta_layout::before,
+.cta_layout::after,
+.cta_wrap::before,
+.cta_wrap::after {
+  background-image: none !important;
+  display: none !important;
+}
+
+@keyframes windEffect {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.cta_layout h2, .cta_layout p {
+  color: #f0f9ff !important;
+  position: relative;
+  z-index: 2;
+}
