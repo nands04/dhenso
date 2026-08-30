@@ -36,11 +36,11 @@ html {
 /* ---------- NAVEGAÇÃO (HEADER) ---------- */
 .nav_desktop_wrap,
 .nav_mobile_contain {
-  background-color: var(--dh-bg) !important;
-  border-bottom: 1px solid rgba(10, 77, 140, 0.12);
+  background-color: var(--dh-primary) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 .nav_links_text {
-  color: var(--dh-text) !important;
+  color: #ffffff !important;
 }
 .nav_links_link:hover .nav_links_text {
   color: var(--dh-accent) !important;
@@ -331,10 +331,10 @@ section:has(.integrations_cms_wrap) {
 
 /* ---------- MOBILE NAV (hamburger) ---------- */
 .nav_button_line {
-  background-color: var(--dh-primary) !important;
+  background-color: #ffffff !important;
 }
 .nav_mobile_menu_wrap {
-  background-color: var(--dh-bg) !important;
+  background-color: var(--dh-primary) !important;
 }
 .nav_menu_backdrop,
 .nav_dropdown_backdrop {
@@ -448,7 +448,13 @@ html, body {
   z-index: 9998 !important;
 }
 .w-nav-menu {
-  background-color: var(--dh-bg) !important;
+  background-color: var(--dh-primary) !important;
+}
+
+/* Remover textos em azul e imagens (solicitação do usuário) */
+.dh-hero-badge,
+.faqs_cta_visual {
+  display: none !important;
 }
 
 /* ---------- CORREÇÕES MOBILE (MAX-WIDTH: 767px) ---------- */
@@ -479,10 +485,14 @@ html, body {
   }
 
   /* SVG Wavy Line in How It Works */
-  .how-works_mobile-svg,
-  .how-works_desktop-svg,
   .how-works_mobile-small,
   .how-works_phone {
+    display: none !important;
+  }
+
+  /* Remove hero photos and text on mobile */
+  .home-hero_avatars,
+  .home-hero_trust_text {
     display: none !important;
   }
 
